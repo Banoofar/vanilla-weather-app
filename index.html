@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&family=Mynerve&family=Rokkitt:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Homework PLus Week5</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card total">
+        <div class="card-body">
+          <form id="search">
+            <button class="current" id="current-location">
+              current location
+            </button>
+            <input class="submit" type="submit" value="🔎" />
+            <input
+              class="name"
+              type="text"
+              placeholder="Type the city name"
+              autofocus="on"
+              id="city-name"
+            />
+          </form>
+          <div class="row">
+            <div class="card card-1" style="width: 17rem">
+              <div class="card-body">
+                <h1 class="card-title tehran" id="h1">Tehran</h1>
+                <p class="card-text weather">
+                  Today the weather in <span id="text-city">Tehran</span> is
+                </p>
+                <div class="cloud-1">☁</div>
+                <div class="cloudy-1" id="weather-mood">Cloudy</div>
+                <div class="row subtitle">
+                  <div class="col-6" id="day">Temperature</div>
+                  <div class="col-6" id="time">Humidity</div>
+                </div>
+                <div class="row">
+                  <div class="col-6" id="current-temp">19</div>
+                  <div class="col-6" id="current-hmd">50%</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-7">
+              <div class="row">
+                <div class="card card-2" style="width: 15rem">
+                  <div class="card-body">
+                    <h2 class="card-title">Fri</h2>
+                    <div class="cloud-2">☁</div>
+                    <div class="row subtitle-1">
+                      <div class="col-6">Temp</div>
+                      <div class="col-6">HMD</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">19</div>
+                      <div class="col-6">50%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-3" style="width: 15rem">
+                  <div class="card-body">
+                    <h3 class="card-title">Sat</h3>
+
+                    <div class="cloud-2">☁</div>
+                    <div class="row subtitle-1">
+                      <div class="col-6">Temp</div>
+                      <div class="col-6">HMD</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">19</div>
+                      <div class="col-6">50%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="card card-4" style="width: 10rem">
+                  <div class="card-body">
+                    <h4 class="card-title">Sun</h4>
+                    <div class="cloud-3">☁</div>
+                    <div class="row">
+                      <div class="col-6">Temp</div>
+                      <div class="col-6">HMD</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">19</div>
+                      <div class="col-6">50%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-5" style="width: 10rem">
+                  <div class="card-body">
+                    <h5 class="card-title">Mon</h5>
+                    <div class="cloud-3">☁</div>
+                    <div class="row">
+                      <div class="col-6">Temp</div>
+                      <div class="col-6">HMD</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">19</div>
+                      <div class="col-6">50%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-6" style="width: 10rem">
+                  <div class="card-body">
+                    <h6 class="card-title">Tue</h6>
+                    <div class="cloud-3">☁</div>
+                    <div class="row">
+                      <div class="col-6">Temp</div>
+                      <div class="col-6">HMD</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">19</div>
+                      <div class="col-6">50%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
