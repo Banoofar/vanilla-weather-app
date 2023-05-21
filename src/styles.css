@@ -123,3 +123,8 @@ div.card-6 {
 .subtitle-1 {
   font-size: 17px;
 }
+
+.small-link {
+  text-align: center;
+  font-family: "Rokkitt", serif;
+}
