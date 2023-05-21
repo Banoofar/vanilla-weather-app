@@ -52,23 +52,11 @@ h1 {
 .same-size {
   font-size: 24px;
 }
+.smaller {
+  font-size: small;
+}
 .tehran {
   margin-top: 13px;
-}
-h2 {
-  font-size: 24px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 24px;
-}
-h5 {
-  font-size: 24px;
-}
-h6 {
-  font-size: 24px;
 }
 
 div.card-1 {
