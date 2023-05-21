@@ -1,3 +1,8 @@
+div.app {
+  margin: 60px auto;
+  max-width: 800px;
+}
+
 div.card {
   border-color: #113f67;
   color: #113f67;
