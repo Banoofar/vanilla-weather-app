@@ -1,5 +1,4 @@
 div.app {
-  margin: 60px auto;
   max-width: 800px;
 }
 
@@ -27,14 +26,14 @@ input {
   font-size: 20px;
   padding-right: 12.872rem;
   background-color: #e7eaf6;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-left: -2px;
   color: #38598b;
 }
 .submit {
   font-size: 20px;
   background-color: #e7eaf6;
-  border-radius: 5px;
+  border-radius: 6px;
   font-family: "Rokkitt", serif;
 }
 .current {
