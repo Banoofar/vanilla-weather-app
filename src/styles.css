@@ -2,6 +2,9 @@ div.app {
   max-width: 800px;
   text-align: center;
 }
+div.container {
+  text-align: center;
+}
 
 div.card {
   border-color: #113f67;
