@@ -1,3 +1,8 @@
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
 div.card {
   border-color: #113f67;
   color: #113f67;
