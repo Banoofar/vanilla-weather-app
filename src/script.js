@@ -38,7 +38,7 @@ if (weather[city] !== undefined) {
 
 function showCityTemperature(response) {
   let temp = Math.round(response.data.main.temp);
-  let hmd = Math.round(response.data.main.wind);
+  let hmd = Math.round(response.data.main.windspeed);
   let cityTemp = document.querySelector("#current-temp");
   cityTemp.innerHTML = `${temp}°C`;
   let cityHumid = document.querySelector("#current-hmd");
