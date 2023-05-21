@@ -40,9 +40,9 @@ function showCityTemperature(response) {
   let temp = Math.round(response.data.main.temp);
   let hmd = Math.round(response.data.wind.speed);
   let cityTemp = document.querySelector("#current-temp");
-  cityTemp.innerHTML = `${temp}°C`;
+  cityTemp.innerHTML = `${temp}°C|F°`;
   let cityHumid = document.querySelector("#current-hmd");
-  cityHumid.innerHTML = `${hmd}%`;
+  cityHumid.innerHTML = `${hmd}km/h`;
   let cityDescription = document.querySelector("#weather-mood");
   cityDescription.innerHTML = response.data.weather[0].description;
 }
@@ -67,9 +67,9 @@ function displayCurrent(response) {
   let h1 = document.querySelector("#h1");
   h1.innerHTML = "Current Location";
   let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = `${response.data.main.temp}°C`;
+  currentTemp.innerHTML = `${response.data.main.temp}°C|F°`;
   let currentHumid = document.querySelector("#current-hmd");
-  currentHumid.innerHTML = `${response.data.main.humidity}%`;
+  currentHumid.innerHTML = `${response.data.wind.speed}km/h`;
   let currentDescription = document.querySelector("#weather-mood");
   currentDescription.innerHTML = response.data.weather[0].description;
   let currentLoc = document.querySelector("#text-city");
