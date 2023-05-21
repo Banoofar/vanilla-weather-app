@@ -29,113 +29,115 @@
   </head>
   <body>
     <div class="container">
-      <div class="card total">
-        <div class="card-body">
-          <form id="search">
-            <button class="current" id="current-location">
-              current location
-            </button>
-            <input class="submit" type="submit" value="🔎" />
-            <input
-              class="name"
-              type="text"
-              placeholder="Type the city name"
-              autofocus="on"
-              id="city-name"
-            />
-          </form>
-          <div class="row">
-            <div class="card card-1" style="width: 17rem">
-              <div class="card-body">
-                <h1 class="card-title tehran" id="h1">Tehran</h1>
-                <p class="card-text weather">
-                  Today the weather in <span id="text-city">Tehran</span> is
-                </p>
-                <div class="cloud-1">☁</div>
-                <div class="cloudy-1" id="weather-mood">Cloudy</div>
-                <div class="row subtitle">
-                  <div class="col-6" id="day">Temperature</div>
-                  <div class="col-6" id="time">Humidity</div>
+      <div class="weather-app">
+        <div class="card total">
+          <div class="card-body">
+            <form id="search">
+              <button class="current" id="current-location">
+                current location
+              </button>
+              <input class="submit" type="submit" value="🔎" />
+              <input
+                class="name"
+                type="text"
+                placeholder="Type the city name"
+                autofocus="on"
+                id="city-name"
+              />
+            </form>
+            <div class="row">
+              <div class="card card-1" style="width: 17rem">
+                <div class="card-body">
+                  <h1 class="card-title tehran" id="h1">Tehran</h1>
+                  <p class="card-text weather">
+                    Today the weather in <span id="text-city">Tehran</span> is
+                  </p>
+                  <div class="cloud-1">☁</div>
+                  <div class="cloudy-1" id="weather-mood">Cloudy</div>
+                  <div class="row subtitle">
+                    <div class="col-6" id="day">Temperature</div>
+                    <div class="col-6" id="time">Humidity</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6" id="current-temp">19°C|°F</div>
+                    <div class="col-6" id="current-hmd">50%</div>
+                  </div>
                 </div>
+              </div>
+              <div class="col-7">
                 <div class="row">
-                  <div class="col-6" id="current-temp">19°C|°F</div>
-                  <div class="col-6" id="current-hmd">50%</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-7">
-              <div class="row">
-                <div class="card card-2" style="width: 15rem">
-                  <div class="card-body">
-                    <h2 class="card-title same-size">Fri</h2>
-                    <div class="cloud-2">☁</div>
-                    <div class="row subtitle-1">
-                      <div class="col-6">Temp</div>
-                      <div class="col-6">HMD</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">19 °C|°F</div>
-                      <div class="col-6">50%</div>
+                  <div class="card card-2" style="width: 15rem">
+                    <div class="card-body">
+                      <h2 class="card-title same-size">Fri</h2>
+                      <div class="cloud-2">☁</div>
+                      <div class="row subtitle-1">
+                        <div class="col-6">Temp</div>
+                        <div class="col-6">HMD</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">19 °C|°F</div>
+                        <div class="col-6">50%</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="card card-3" style="width: 15rem">
-                  <div class="card-body">
-                    <h3 class="card-title same-size">Sat</h3>
+                  <div class="card card-3" style="width: 15rem">
+                    <div class="card-body">
+                      <h3 class="card-title same-size">Sat</h3>
 
-                    <div class="cloud-2">☁</div>
-                    <div class="row subtitle-1">
-                      <div class="col-6">Temp</div>
-                      <div class="col-6">HMD</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6">19 °C|°F</div>
-                      <div class="col-6">50%</div>
+                      <div class="cloud-2">☁</div>
+                      <div class="row subtitle-1">
+                        <div class="col-6">Temp</div>
+                        <div class="col-6">HMD</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6">19 °C|°F</div>
+                        <div class="col-6">50%</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="row">
-                <div class="card card-4" style="width: 10rem">
-                  <div class="card-body">
-                    <h4 class="card-title same-size">Sun</h4>
-                    <div class="cloud-3">☁</div>
-                    <div class="row">
-                      <div class="col-6">Temp</div>
-                      <div class="col-6">HMD</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 smaller">19 °C|°F</div>
-                      <div class="col-6 smaller">50%</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card card-5" style="width: 10rem">
-                  <div class="card-body">
-                    <h5 class="card-title same-size">Mon</h5>
-                    <div class="cloud-3">☁</div>
-                    <div class="row">
-                      <div class="col-6">Temp</div>
-                      <div class="col-6">HMD</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 smaller">19 °C|°F</div>
-                      <div class="col-6 smaller">50%</div>
+                <div class="row">
+                  <div class="card card-4" style="width: 10rem">
+                    <div class="card-body">
+                      <h4 class="card-title same-size">Sun</h4>
+                      <div class="cloud-3">☁</div>
+                      <div class="row">
+                        <div class="col-6">Temp</div>
+                        <div class="col-6">HMD</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 smaller">19 °C|°F</div>
+                        <div class="col-6 smaller">50%</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="card card-6" style="width: 10rem">
-                  <div class="card-body">
-                    <h6 class="card-title same-size">Tue</h6>
-                    <div class="cloud-3">☁</div>
-                    <div class="row">
-                      <div class="col-6">Temp</div>
-                      <div class="col-6">HMD</div>
+                  <div class="card card-5" style="width: 10rem">
+                    <div class="card-body">
+                      <h5 class="card-title same-size">Mon</h5>
+                      <div class="cloud-3">☁</div>
+                      <div class="row">
+                        <div class="col-6">Temp</div>
+                        <div class="col-6">HMD</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 smaller">19 °C|°F</div>
+                        <div class="col-6 smaller">50%</div>
+                      </div>
                     </div>
-                    <div class="row">
-                      <div class="col-6 smaller">19 °C|°F</div>
-                      <div class="col-6 smaller">50%</div>
+                  </div>
+                  <div class="card card-6" style="width: 10rem">
+                    <div class="card-body">
+                      <h6 class="card-title same-size">Tue</h6>
+                      <div class="cloud-3">☁</div>
+                      <div class="row">
+                        <div class="col-6">Temp</div>
+                        <div class="col-6">HMD</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 smaller">19 °C|°F</div>
+                        <div class="col-6 smaller">50%</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -143,14 +145,14 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="small-link">
-        <a
-          href="https://github.com/Banoofar/vanilla-weather-app"
-          target="_blank"
-          >Open-source code</a
-        >
-        by Banoofar
+        <div class="small-link">
+          <a
+            href="https://github.com/Banoofar/vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Banoofar
+        </div>
       </div>
     </div>
     <script src="src/script.js"></script>
