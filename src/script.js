@@ -39,12 +39,15 @@ if (weather[city] !== undefined) {
 function showCityTemperature(response) {
   let temp = Math.round(response.data.main.temp);
   let hmd = Math.round(response.data.wind.speed);
+  let icon = response.data.weather.icon;
   let cityTemp = document.querySelector("#current-temp");
   cityTemp.innerHTML = `${temp}°C|F°`;
   let cityHumid = document.querySelector("#current-hmd");
   cityHumid.innerHTML = `${hmd}km/h`;
   let cityDescription = document.querySelector("#weather-mood");
   cityDescription.innerHTML = response.data.weather[0].description;
+  let changeIcon = document.querySelector("#icon_api");
+  changeIcon.innerHTML = icon;
 }
 function findCity(event) {
   event.preventDefault();
