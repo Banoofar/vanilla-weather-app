@@ -32,25 +32,26 @@
       <div class="weather-app">
         <div class="card total">
           <div class="card-body">
-            <form id="search">
+            <form id="search-form">
               <button class="current" id="current-location">
                 current location
               </button>
               <input class="submit" type="submit" value="🔎" />
               <input
                 class="name"
-                type="text"
+                type="search"
                 placeholder="Type the city name"
                 autofocus="on"
                 id="city-name"
+                autocomplete="on"
               />
             </form>
             <div class="row">
               <div class="card card-1" style="width: 17rem">
                 <div class="card-body">
-                  <h1 class="card-title tehran" id="h1">Tehran</h1>
+                  <h1 class="card-title tehran" id="h1"></h1>
                   <p class="card-text weather">
-                    Today the weather in <span id="text-city">Tehran</span> is
+                    Today the weather in <span id="text-city"></span> is
                   </p>
                   <div>
                     <img
@@ -59,14 +60,14 @@
                       class="cloud-1"
                     />
                   </div>
-                  <div class="cloudy-1" id="weather-mood">Cloudy</div>
+                  <div class="cloudy-1" id="weather-mood"></div>
                   <div class="row subtitle">
                     <div class="col-6" id="day">Temperature</div>
                     <div class="col-6" id="time">Wind Speed</div>
                   </div>
                   <div class="row">
                     <div class="col-6">
-                      <strong id="temperature">19</strong>
+                      <strong id="temperature"></strong>
                       <span class="units"
                         ><a href="#" id="celsius-link">°C</a>|<a
                           href="#"
@@ -76,7 +77,7 @@
                         ></span
                       >
                     </div>
-                    <div class="col-6"><strong id="wind">18</strong> km/h</div>
+                    <div class="col-6"><strong id="wind"></strong> km/h</div>
                   </div>
                 </div>
               </div>
