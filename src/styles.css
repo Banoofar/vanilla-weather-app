@@ -58,7 +58,7 @@ h1 {
   font-size: 24px;
 }
 .smaller {
-  font-size: 12.8px;
+  font-size: 12px;
 }
 .tehran {
   margin-top: 13px;
@@ -95,10 +95,9 @@ div.card-6 {
 .weather {
   line-height: 36px;
   font-size: 16.3px;
-  margin-bottom: 37px;
 }
 .cloud-1 {
-  font-size: 80px;
+  width: 70px;
   line-height: 30px;
   margin-bottom: 10px;
 }
@@ -123,4 +122,7 @@ div.card-6 {
 .small-link {
   text-align: center;
   font-family: "Rokkitt", serif;
+}
+a.faren {
+  text-decoration-line: none;
 }

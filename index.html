@@ -52,18 +52,31 @@
                   <p class="card-text weather">
                     Today the weather in <span id="text-city">Tehran</span> is
                   </p>
-                  <div class="cloud-1" id="icon_api">☁</div>
+                  <div>
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                      id="icon"
+                      class="cloud-1"
+                    />
+                  </div>
                   <div class="cloudy-1" id="weather-mood">Cloudy</div>
                   <div class="row subtitle">
                     <div class="col-6" id="day">Temperature</div>
                     <div class="col-6" id="time">Wind Speed</div>
                   </div>
                   <div class="row">
-                    <div class="col-6" id="current-temp">
-                      <strong>19</strong>
-                      <span class="units">°C|<a href="#">°F</a></span>
+                    <div class="col-6">
+                      <strong id="temperature">19</strong>
+                      <span class="units"
+                        ><a href="#" id="celsius-link">°C</a>|<a
+                          href="#"
+                          class="faren"
+                          id="fahrenheit-link"
+                          >°F</a
+                        ></span
+                      >
                     </div>
-                    <div class="col-6" id="current-hmd">18km/h</div>
+                    <div class="col-6"><strong id="wind">18</strong> km/h</div>
                   </div>
                 </div>
               </div>
@@ -80,9 +93,11 @@
                       <div class="row">
                         <div class="col-6">
                           <strong>19</strong>
-                          <span class="units">°C|<a href="#">°F</a></span>
+                          <span class="units"
+                            >°C|<a class="faren" href="#">°F</a></span
+                          >
                         </div>
-                        <div class="col-6">18km/h</div>
+                        <div class="col-6"><strong>18</strong> km/h</div>
                       </div>
                     </div>
                   </div>
@@ -98,9 +113,11 @@
                       <div class="row">
                         <div class="col-6">
                           <strong>19</strong>
-                          <span class="units">°C|<a href="#">°F</a></span>
+                          <span class="units"
+                            >°C|<a class="faren" href="#">°F</a></span
+                          >
                         </div>
-                        <div class="col-6">18km/h</div>
+                        <div class="col-6"><strong>18</strong> km/h</div>
                       </div>
                     </div>
                   </div>
@@ -118,9 +135,13 @@
                       <div class="row">
                         <div class="col-6 smaller">
                           <strong>19</strong>
-                          <span class="units">°C|<a href="#">°F</a></span>
+                          <span class="units"
+                            >°C|<a class="faren" href="#">°F</a></span
+                          >
                         </div>
-                        <div class="col-6 smaller">18km/h</div>
+                        <div class="col-6 smaller">
+                          <strong>18</strong> km/h
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -135,9 +156,13 @@
                       <div class="row">
                         <div class="col-6 smaller">
                           <strong>19</strong>
-                          <span class="units">°C|<a href="#">°F</a></span>
+                          <span class="units"
+                            >°C|<a class="faren" href="#">°F</a></span
+                          >
                         </div>
-                        <div class="col-6 smaller">18km/h</div>
+                        <div class="col-6 smaller">
+                          <strong>18</strong> km/h
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -152,9 +177,13 @@
                       <div class="row">
                         <div class="col-6 smaller">
                           <strong>19</strong>
-                          <span class="units">°C|<a href="#">°F</a></span>
+                          <span class="units"
+                            >°C|<a class="faren" href="#">°F</a></span
+                          >
                         </div>
-                        <div class="col-6 smaller">18km/h</div>
+                        <div class="col-6 smaller">
+                          <strong>18</strong> km/h
+                        </div>
                       </div>
                     </div>
                   </div>

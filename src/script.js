@@ -1,70 +1,38 @@
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  oslo: {
-    temp: -5,
-    humidity: 20,
-  },
-};
-
-let city = prompt("Enter a city");
-if (weather[city] !== undefined) {
-  let temperature = weather[city].temp;
-  let humid = weather[city].humidity;
-  let celsius = Math.round(temperature);
-  let fahrenheit = Math.round((temperature * 9) / 5 + 32);
-  alert(
-    `It is currently ${celsius}°C (${fahrenheit}°F) in ${city} with a humidity of ${humid}%`
-  );
-} else {
-  alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-  );
-}
-
 function showCityTemperature(response) {
   let temp = Math.round(response.data.main.temp);
-  let hmd = Math.round(response.data.wind.speed);
-  let icon = response.data.weather.icon;
-  let cityTemp = document.querySelector("#current-temp");
-  cityTemp.innerHTML = `${temp}°C|F°`;
-  let cityHumid = document.querySelector("#current-hmd");
-  cityHumid.innerHTML = `${hmd}km/h`;
+  let wind = Math.round(response.data.wind.speed);
+  let cityTemp = document.querySelector("#temperature");
+  cityTemp.innerHTML = `${temp}`;
+  let cityHumid = document.querySelector("#wind");
+  cityHumid.innerHTML = `${wind}`;
   let cityDescription = document.querySelector("#weather-mood");
   cityDescription.innerHTML = response.data.weather[0].description;
-  let changeIcon = document.querySelector("#icon_api");
-  changeIcon.innerHTML = icon;
+
+  celsiusTemperature = response.data.main.temp;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-function findCity(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#city-name");
+function findCity(city) {
   let h1 = document.querySelector("#h1");
-  h1.innerHTML = `${cityInput.value}`;
+  h1.innerHTML = `${city}`;
   let textCity = document.querySelector("#text-city");
-  textCity.innerHTML = `${cityInput.value}`;
-  let searchCity = `${cityInput.value}`;
+  textCity.innerHTML = `${city}`;
   let key = "c9b1d26ba353d1f56882373209bf2852";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=${key}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
   axios.get(apiUrl).then(showCityTemperature);
 }
 
-let form = document.querySelector("#search");
-form.addEventListener("submit", findCity);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-name");
+  findCity(cityInputElement.value);
+}
 
 function displayCurrent(response) {
   let h1 = document.querySelector("#h1");
@@ -77,6 +45,7 @@ function displayCurrent(response) {
   currentDescription.innerHTML = response.data.weather[0].description;
   let currentLoc = document.querySelector("#text-city");
   currentLoc.innerHTML = "your current location";
+  celsiusTemperature = response.data.main.temp;
 }
 
 function showPosition(position) {
@@ -90,9 +59,40 @@ function showPosition(position) {
   axios.get(url).then(displayCurrent);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 function showCurrentLocation() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+let celsiusTemperature = null;
+
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", showCurrentLocation);
+
+let form = document.querySelector("#search");
+form.addEventListener("submit", findCity);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+findCity("Tehran");
