@@ -7,7 +7,35 @@ div.card {
   border-color: #113f67;
   color: #113f67;
   font-family: "Rokkitt", serif;
-  background-color: #a2a8d314;
+  background-color: #7ca5fd36;
+}
+div.col-5 {
+  margin-right: -39.9px;
+}
+
+div.card-styling-1 {
+  border-color: #113f67;
+  color: #113f67;
+  font-family: "Rokkitt", serif;
+  background-color: #7ca5fd36;
+  border: #113f67 solid 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  height: 5.7cm;
+}
+div.card-styling-2 {
+  margin-right: 25px;
+  margin-left: -12.2px;
+  margin-top: 0.3px;
+  height: 5.122cm;
+  border-color: #113f67;
+  color: #113f67;
+  font-family: "Rokkitt", serif;
+  background-color: #7ca5fd36;
+  border: #113f67 solid 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 div.total {
@@ -42,7 +70,7 @@ input {
   font-family: "Rokkitt", serif;
   box-sizing: border-box;
   margin-bottom: 7px;
-  margin-right: -0.6px;
+  margin-right: 2px;
   padding-right: 134px;
   color: #38598b;
   background-color: #e7eaf6;
@@ -65,10 +93,10 @@ h1 {
 }
 
 div.card-1 {
-  margin-right: 4px;
   text-align: center;
   color: #113f67;
-  margin-left: 25px;
+  margin-left: 13.5px;
+  height: 11.09486cm;
 }
 div.card-2 {
   text-align: center;
@@ -97,7 +125,7 @@ div.card-6 {
   font-size: 16.3px;
 }
 .cloud-1 {
-  width: 70px;
+  width: 100px;
   line-height: 30px;
   margin-bottom: 10px;
 }
@@ -125,4 +153,30 @@ div.card-6 {
 }
 a.faren {
   text-decoration-line: none;
+}
+
+.weather-forecast-temperature {
+  font-weight: bold;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.forecast,
+.forecast-2 {
+  text-align: center;
+}
+.forecast-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+}
+
+.forecast-item {
+  flex-shrink: 0;
+  min-width: 33%;
+  width: 85%;
+}
+.celsius-link {
+  color: #113f67;
+  text-decoration: none;
 }

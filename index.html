@@ -47,148 +47,48 @@
               />
             </form>
             <div class="row">
-              <div class="card card-1" style="width: 17rem">
-                <div class="card-body">
-                  <h1 class="card-title tehran" id="h1"></h1>
-                  <p class="card-text weather">
-                    Today the weather in <span id="text-city"></span> is
-                  </p>
-                  <div>
-                    <img
-                      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                      id="icon"
-                      class="cloud-1"
-                    />
-                  </div>
-                  <div class="cloudy-1" id="weather-mood"></div>
-                  <div class="row subtitle">
-                    <div class="col-6" id="day">Temperature</div>
-                    <div class="col-6" id="time">Wind Speed</div>
-                  </div>
-                  <div class="row">
-                    <div class="col-6">
-                      <strong id="temperature"></strong>
-                      <span class="units"
-                        ><a href="#" id="celsius-link">°C</a>|<a
-                          href="#"
-                          class="faren"
-                          id="fahrenheit-link"
-                          >°F</a
-                        ></span
-                      >
+              <div class="col-5">
+                <div class="card card-1" style="width: 17rem">
+                  <div class="card-body">
+                    <h1 class="card-title tehran" id="h1"></h1>
+                    <p class="card-text weather">
+                      Today the weather in <span id="text-city"></span> is
+                    </p>
+                    <div>
+                      <img src="" id="icon" class="cloud-1" />
                     </div>
-                    <div class="col-6"><strong id="wind"></strong> km/h</div>
+                    <div class="cloudy-1" id="weather-mood"></div>
+                    <div class="row subtitle">
+                      <div class="col-6" id="day">Temperature</div>
+                      <div class="col-6" id="time">Wind Speed</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <strong id="temperature"></strong>
+                        <span class="units"
+                          ><a href="#" class="celsius-link" id="celsius-link"
+                            >°C</a
+                          >|<a href="#" class="faren" id="fahrenheit-link"
+                            >°F</a
+                          ></span
+                        >
+                      </div>
+                      <div class="col-6"><strong id="wind"></strong> km/h</div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="col-7">
-                <div class="row">
-                  <div class="card card-2" style="width: 15rem">
-                    <div class="card-body">
-                      <h2 class="card-title same-size">Fri</h2>
-                      <div class="cloud-2">☁</div>
-                      <div class="row subtitle-1">
-                        <div class="col-6">Temp</div>
-                        <div class="col-6">Wind</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <strong>19</strong>
-                          <span class="units"
-                            >°C|<a class="faren" href="#">°F</a></span
-                          >
-                        </div>
-                        <div class="col-6"><strong>18</strong> km/h</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-3" style="width: 15rem">
-                    <div class="card-body">
-                      <h3 class="card-title same-size">Sat</h3>
-
-                      <div class="cloud-2">☁</div>
-                      <div class="row subtitle-1">
-                        <div class="col-6">Temp</div>
-                        <div class="col-6">Wind</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6">
-                          <strong>19</strong>
-                          <span class="units"
-                            >°C|<a class="faren" href="#">°F</a></span
-                          >
-                        </div>
-                        <div class="col-6"><strong>18</strong> km/h</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="card card-4" style="width: 10rem">
-                    <div class="card-body">
-                      <h4 class="card-title same-size">Sun</h4>
-                      <div class="cloud-3">☁</div>
-                      <div class="row">
-                        <div class="col-6">Temp</div>
-                        <div class="col-6">Wind</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6 smaller">
-                          <strong>19</strong>
-                          <span class="units"
-                            >°C|<a class="faren" href="#">°F</a></span
-                          >
-                        </div>
-                        <div class="col-6 smaller">
-                          <strong>18</strong> km/h
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-5" style="width: 10rem">
-                    <div class="card-body">
-                      <h5 class="card-title same-size">Mon</h5>
-                      <div class="cloud-3">☁</div>
-                      <div class="row">
-                        <div class="col-6">Temp</div>
-                        <div class="col-6">Wind</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6 smaller">
-                          <strong>19</strong>
-                          <span class="units"
-                            >°C|<a class="faren" href="#">°F</a></span
-                          >
-                        </div>
-                        <div class="col-6 smaller">
-                          <strong>18</strong> km/h
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card card-6" style="width: 10rem">
-                    <div class="card-body">
-                      <h6 class="card-title same-size">Tue</h6>
-                      <div class="cloud-3">☁</div>
-                      <div class="row">
-                        <div class="col-6">Temp</div>
-                        <div class="col-6">Wind</div>
-                      </div>
-                      <div class="row">
-                        <div class="col-6 smaller">
-                          <strong>19</strong>
-                          <span class="units"
-                            >°C|<a class="faren" href="#">°F</a></span
-                          >
-                        </div>
-                        <div class="col-6 smaller">
-                          <strong>18</strong> km/h
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div
+                  class="forecast"
+                  id="forecast"
+                  style="width: 33.88rem"
+                ></div>
+                <div
+                  class="forecast-2"
+                  id="forecast-2"
+                  style="width: 11.216rem"
+                ></div>
               </div>
             </div>
           </div>
