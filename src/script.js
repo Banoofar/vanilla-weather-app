@@ -145,6 +145,91 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function displayLocationForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastElement2 = document.querySelector("#forecast-2");
+  let forecastHTML = `<div class="row">`;
+  let forecastHTML2 = "";
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 2) {
+      forecastHTML += ` <div class="col-5 card-styling-1" >
+                      <div class="card-title same-size weather-forecast-date">
+                       ${formatDay(forecastDay.dt)}
+                      </div>
+                      <div class="cloud-2">
+                        <img
+                          src="https://openweathermap.org/img/wn/${
+                            forecastDay.weather[0].icon
+                          }@2x.png"
+                        />
+                      </div>
+                      <div class="row subtitle-1">
+                        <div class="col-6">Temp</div>
+                        <div class="col-6">Wind</div>
+                      </div>
+                      <div class="row weather-forecast-temperature">
+                        <div class="col-6">
+                          <span class="weather-forecast-temperature-min"
+                            >${Math.round(forecastDay.temp.min)}°</span
+                          >/<span class="weather-forecast-temperature-max"
+                            >${Math.round(forecastDay.temp.max)}°</span
+                          >
+                        </div>
+                        <div class="col-6"><strong>${Math.round(
+                          forecastDay.wind_speed * 3.6
+                        )}</strong> km/h</div>
+                      </div>
+                    </div> `;
+    } else {
+      if (index < 5) {
+        forecastHTML2 += ` <div class="forecast-item  card-styling-2"> 
+        <div class="card-title same-size">   ${formatDay(forecastDay.dt)}</div>
+        <div class="cloud-3"> <img
+                          src="https://openweathermap.org/img/wn/${
+                            forecastDay.weather[0].icon
+                          }@2x.png"
+                          width = "60%"
+                        /></div>
+        <div class="row">
+          <div class="col-6">Temp</div>
+          <div class="col-6">Wind</div>
+        </div>
+        <div class="row weather-forecast-temperature">
+          <div class="col-6 smaller">
+              <span class="weather-forecast-temperature-min"
+                            >${Math.round(forecastDay.temp.min)}°</span
+                          >/<span class="weather-forecast-temperature-max"
+                            >${Math.round(forecastDay.temp.max)}°</span
+                          >
+          </div>
+          <div class="col-6 smaller">
+            <strong>${Math.round(forecastDay.wind_speed * 3.6)}</strong> km/h
+          </div>
+        </div>
+      </div> `;
+      }
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
+  const forecastContainer = document.createElement("div");
+  forecastContainer.classList.add("forecast-container");
+  forecastContainer.innerHTML = forecastHTML2;
+
+  forecastElement2.innerHTML = "";
+  forecastElement2.appendChild(forecastContainer);
+}
+
+function getLocationforecast(coordinates) {
+  let apiKey = "53f3bc1f5d348c44be3e3754c7185573";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayLocationForecast);
+}
+
 function displayCurrent(response) {
   let h1 = document.querySelector("#h1");
   h1.innerHTML = "Current Location";
@@ -156,6 +241,8 @@ function displayCurrent(response) {
   currentDescription.innerHTML = response.data.weather[0].description;
   let currentLoc = document.querySelector("#text-city");
   currentLoc.innerHTML = "your current location";
+
+  getLocationforecast(response.data.coord);
 }
 
 function showPosition(position) {
